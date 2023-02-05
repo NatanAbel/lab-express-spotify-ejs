@@ -75,7 +75,7 @@ app.get('/albums/:artistId', async (req, res) => {
 app.get('/tracks/:albumId', async(req, res) => {
 
   const albumId = req.params.albumId 
-  let tracks;
+
   await spotifyApi
   .getAlbumTracks(albumId)
   .then(data => {
